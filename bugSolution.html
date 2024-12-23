@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+<style>
+  #myDiv {
+    display: none; /* Explicitly set display to none */
+  }
+</style>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+
+  <script>
+    // Correct way to show the div after a delay
+    setTimeout(function() {
+      document.getElementById("myDiv").style.display = "block";
+    }, 2000);
+  </script>
+</body>
+</html>
